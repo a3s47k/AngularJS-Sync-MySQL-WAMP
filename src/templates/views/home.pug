@@ -1,0 +1,11 @@
+.item-box
+	.row.no-gutters
+		.col-4(ng-repeat='product in data').item
+			p.code Code: {{product.productCode}}
+			p
+				img(src="http://localhost:7000{{product.productImage}}", alt="")
+			p.name Name: {{product.productName}}
+			p.price Price: {{product.productPrice}}
+			p.discount Discount: {{product.discount}}
+			p.shipping Shipping Fee: {{product.shipping}}
+			p.stock Stock: {{product.stock}}

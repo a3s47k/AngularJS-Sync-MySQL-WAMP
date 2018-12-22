@@ -1,0 +1,12 @@
+.item(ng-repeat='product in page')
+	p {{product.screen}}
+	p {{product.resolution}}
+	p {{product.ports}}
+	p {{product.speakers}}
+ul.nav.nav-pills.flex-column.mb-4
+	li.nav-item(ng-repeat="item in data") 
+		a.nav-link(ui-sref="{{item.url}}" ui-sref-active="active" ng-click="sendRequestPageContent(item.id)" ,ng-model="username")
+			i.fa.fa-fw.mr-2(ng-class="(item.icon.length) ? item.icon : ''")
+			| {{item.name}}
+
+
